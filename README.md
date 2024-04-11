@@ -56,10 +56,10 @@ If you do not have a patched font installed, you can override or remove any icon
 ### TPM
 
 1. Install [TPM](https://github.com/tmux-plugins/tpm)
-2. Add the Catppuccin plugin:
+2. Add the ayu plugin:
 
 ```bash
-set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'teddy-bear-123/tmux-ayu'
 # ...alongside
 set -g @plugin 'tmux-plugins/tpm'
 ```
@@ -67,15 +67,15 @@ set -g @plugin 'tmux-plugins/tpm'
 3. (Optional) Set your preferred flavor, it defaults to `"mocha"`:
 
 ```bash
-set -g @catppuccin_flavour 'latte' # or frappe, macchiato, mocha
+set -g @ayu_flavour 'latte' # or frappe, macchiato, mocha
 ```
 
 ### Manual
 
 1. Clone this repository to your desired location (e.g.
-   `~/.config/tmux/plugins/catppuccin`)
+   `~/.config/tmux/plugins/ayu`)
 2. Add the following line to your `tmux.conf` file:
-    `run ~/.config/tmux/plugins/catppuccin/catppuccin.tmux`
+    `run ~/.config/tmux/plugins/ayu/ayu.tmux`
 3. (Optional) Set your preferred flavor and/or add configuration options as
    listed in [Configuration Options](#configuration-options).
 4. Reload Tmux by either restarting the session or reloading it with `tmux source-file ~/.tmux.conf`
@@ -87,7 +87,7 @@ This is a diagram of how the theme is split between its components.
 
 ## Configuration options
 
-All flavors support certain levels of customization that match our [Catppuccin
+All flavors support certain levels of customization that match our [ayu
 Style Guide][style-guide]. To add these customizations, add any of the following
 options to your Tmux configuration.
 
@@ -95,27 +95,27 @@ options to your Tmux configuration.
 
 ### Set the window separator
 ```sh
-set -g @catppuccin_window_separator ""
+set -g @ayu_window_separator ""
 ```
 
 #### Set the window left separator:
 ```sh
-set -g @catppuccin_window_left_separator "█"
+set -g @ayu_window_left_separator "█"
 ```
 
 #### Set the window middle separator:
 ```sh
-set -g @catppuccin_window_middle_separator "█"
+set -g @ayu_window_middle_separator "█"
 ```
 
 #### Set the window right separator:
 ```sh
-set -g @catppuccin_window_right_separator "█"
+set -g @ayu_window_right_separator "█"
 ```
 
 #### Position the number:
 ```sh
-set -g @catppuccin_window_number_position "left"
+set -g @ayu_window_number_position "left"
 ```
 Values:
 - left - the number will be on the left part of the window
@@ -123,7 +123,7 @@ Values:
 
 #### Enable window status:
 ```sh
-set -g @catppuccin_window_status_enable "yes"
+set -g @ayu_window_status_enable "yes"
 ```
 Values:
 - yes - this will enable the window status part
@@ -131,7 +131,7 @@ Values:
 
 #### Enable window status icons instead of text:
 ```sh
-set -g @catppuccin_window_status_icon_enable "yes"
+set -g @ayu_window_status_icon_enable "yes"
 ```
 Values:
 - yes - this will replace the windows status text with icons
@@ -139,20 +139,20 @@ Values:
 
 #### Override windows status icons
 ```sh
-set -g @catppuccin_icon_window_last "󰖰 "
-set -g @catppuccin_icon_window_current "󰖯 "
-set -g @catppuccin_icon_window_zoom "󰁌 "
-set -g @catppuccin_icon_window_mark "󰃀 "
-set -g @catppuccin_icon_window_silent "󰂛 "
-set -g @catppuccin_icon_window_activity "󱅫 "
-set -g @catppuccin_icon_window_bell "󰂞 "
+set -g @ayu_icon_window_last "󰖰 "
+set -g @ayu_icon_window_current "󰖯 "
+set -g @ayu_icon_window_zoom "󰁌 "
+set -g @ayu_icon_window_mark "󰃀 "
+set -g @ayu_icon_window_silent "󰂛 "
+set -g @ayu_icon_window_activity "󱅫 "
+set -g @ayu_icon_window_bell "󰂞 "
 ```
 
 ### Window default
 
 #### Set the window default color fill:
 ```sh
-set -g @catppuccin_window_default_fill "number"
+set -g @ayu_window_default_fill "number"
 ```
 Values:
 - number - only the number of the window part will have color
@@ -161,8 +161,8 @@ Values:
 
 #### Override the window default colors:
 ```sh
-set -g @catppuccin_window_default_color "color" # text color
-set -g @catppuccin_window_default_background "color"
+set -g @ayu_window_default_color "color" # text color
+set -g @ayu_window_default_background "color"
 ```
 
 Values:
@@ -170,14 +170,14 @@ Values:
 
 #### Override the window default text:
 ```sh
-set -g @catppuccin_window_default_text "#{b:pane_current_path}" # use "#W" for application instead of directory
+set -g @ayu_window_default_text "#{b:pane_current_path}" # use "#W" for application instead of directory
 ```
 
 ### Window current
 
 #### Set the window current color fill:
 ```sh
-set -g @catppuccin_window_current_fill "number"
+set -g @ayu_window_current_fill "number"
 ```
 Values:
 - number - only the number of the window part will have color
@@ -186,8 +186,8 @@ Values:
 
 #### Override the window current colors:
 ```sh
-set -g @catppuccin_window_current_color "color" # text color
-set -g @catppuccin_window_current_background "color"
+set -g @ayu_window_current_color "color" # text color
+set -g @ayu_window_current_background "color"
 ```
 
 Values:
@@ -195,18 +195,18 @@ Values:
 
 #### Override the window current text:
 ```sh
-set -g @catppuccin_window_current_text "#{b:pane_current_path}" # use "#W" for application instead of directory
+set -g @ayu_window_current_text "#{b:pane_current_path}" # use "#W" for application instead of directory
 ```
 
 #### Set the current directory format
 ```sh
-set -g @catppuccin_window_current_format_directory_text "#{b:pane_current_path}"
+set -g @ayu_window_current_format_directory_text "#{b:pane_current_path}"
 ```
 Use this to override the way the current directory is displayed.
 
 #### Set the directory format
 ```sh
-set -g @catppuccin_window_format_directory_text "#{b:pane_current_path}"
+set -g @ayu_window_format_directory_text "#{b:pane_current_path}"
 ```
 Use this to override the way the directory is displayed.
 
@@ -215,26 +215,26 @@ Use this to override the way the directory is displayed.
 #### Set the pane border style:
 
 ```sh
-set -g @catppuccin_pane_border_style "fg=blue" # Use a value compatible with the standard tmux 'pane-border-style'
+set -g @ayu_pane_border_style "fg=blue" # Use a value compatible with the standard tmux 'pane-border-style'
 ```
 
 #### Set the pane active border style:
 
 ```sh
-set -g @catppuccin_pane_active_border_style "fg=red" # Use a value compatible with the standard tmux 'pane-border-active-style'
+set -g @ayu_pane_active_border_style "fg=red" # Use a value compatible with the standard tmux 'pane-border-active-style'
 ```
 
 
 ### Status
 #### Set the default status bar visibility
 ```sh
-set -g @catppuccin_status_default "off" # defaults to "on"
+set -g @ayu_status_default "off" # defaults to "on"
 
 ```
 
 #### Override the default status background color
 ```sh
-set -g @catppuccin_status_background "theme"
+set -g @ayu_status_background "theme"
 ```
 This will overwrite the status bar background:
 - "theme" will use the color from the selected theme
@@ -248,17 +248,17 @@ tmux kill-server & tmux
 
 #### Set the status module left separator:
 ```sh
-set -g @catppuccin_status_left_separator ""
+set -g @ayu_status_left_separator ""
 ```
 
 #### Set the status module right separator:
 ```sh
-set -g @catppuccin_status_right_separator "█"
+set -g @ayu_status_right_separator "█"
 ```
 
 #### Set the status connect separator:
 ```sh
-set -g @catppuccin_status_connect_separator "yes"
+set -g @ayu_status_connect_separator "yes"
 ```
 Values:
 - yes - the background color of the separator will not blend in with the background color of tmux
@@ -267,7 +267,7 @@ Values:
 
 #### Set the status module color fill:
 ```sh
-set -g @catppuccin_status_fill "icon"
+set -g @ayu_status_fill "icon"
 ```
 Values:
 - icon - only the icon of the module will have color
@@ -275,7 +275,7 @@ Values:
 
 #### Set the status module justify value:
 ```sh
-set -g @catppuccin_status_justify "left"
+set -g @ayu_status_justify "left"
 ```
 Values:
 - left 
@@ -287,24 +287,24 @@ Values:
 
 ```sh
 tmux_orange="#fab387"
-set -g @catppuccin_pane_status_enabled "yes"
-set -g @catppuccin_pane_border_status "top"
-set -g @catppuccin_pane_left_separator ""
-set -g @catppuccin_pane_right_separator ""
-set -g @catppuccin_pane_middle_separator "█ "
-set -g @catppuccin_pane_number_position "left"
-set -g @catppuccin_pane_default_fill "number"
-set -g @catppuccin_pane_default_text "#{b:pane_current_path}"
-set -g @catppuccin_pane_border_style "fg=$tmux_orange"
-set -g @catppuccin_pane_active_border_style "fg=$tmux_orange"
-set -g @catppuccin_pane_color "$tmux_orange"
-set -g @catppuccin_pane_background_color "$tmux_orange"
+set -g @ayu_pane_status_enabled "yes"
+set -g @ayu_pane_border_status "top"
+set -g @ayu_pane_left_separator ""
+set -g @ayu_pane_right_separator ""
+set -g @ayu_pane_middle_separator "█ "
+set -g @ayu_pane_number_position "left"
+set -g @ayu_pane_default_fill "number"
+set -g @ayu_pane_default_text "#{b:pane_current_path}"
+set -g @ayu_pane_border_style "fg=$tmux_orange"
+set -g @ayu_pane_active_border_style "fg=$tmux_orange"
+set -g @ayu_pane_color "$tmux_orange"
+set -g @ayu_pane_background_color "$tmux_orange"
 ```
 
 #### Set the module list
 ```sh
-set -g @catppuccin_status_modules_right "application session"
-set -g @catppuccin_status_modules_left ""
+set -g @ayu_status_modules_right "application session"
+set -g @ayu_status_modules_left ""
 ```
 Provide a list of modules and the order in which you want them to appear in the status.
 
@@ -324,27 +324,27 @@ Every module (except the module "session") supports the following overrides:
 
 #### Override the specific module icon
 ```sh
-set -g @catppuccin_[module_name]_icon "icon"
+set -g @ayu_[module_name]_icon "icon"
 ```
 
 #### Override the specific module color
 ```sh
-set -g @catppuccin_[module_name]_color "color"
+set -g @ayu_[module_name]_color "color"
 ```
 
 #### Override the specific module text
 ```sh
-set -g @catppuccin_[module_name]_text "text"
+set -g @ayu_[module_name]_text "text"
 ```
 
 #### Removing a specific module option
 ```sh
-set -g @catppuccin_[module_name]_[option] "null"
+set -g @ayu_[module_name]_[option] "null"
 ```
 This is for the situation where you want to remove the icon from a module.
 Ex:
 ```sh
-set -g @catppuccin_date_time_icon "null"
+set -g @ayu_date_time_icon "null"
 ```
 
 ### Battery module
@@ -356,16 +356,16 @@ This module depends on [tmux-battery](https://github.com/tmux-plugins/tmux-batte
 The preferred way to install tmux-battery is using [TPM](https://github.com/tmux-plugins/tpm).
 
 #### Configure
-Load tmux-battery after you load catppuccin.
+Load tmux-battery after you load ayu.
 ```sh
-set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'teddy-bear-123/tmux-ayu'
 ...
 set -g @plugin 'tmux-plugins/tmux-battery'
 ```
 
 Add the battery module to the status modules list.
 ```sh
-set -g @catppuccin_status_modules_right "... battery ..."
+set -g @ayu_status_modules_right "... battery ..."
 ```
 
 ### CPU module
@@ -377,16 +377,16 @@ This module depends on [tmux-cpu](https://github.com/tmux-plugins/tmux-cpu/tree/
 The preferred way to install tmux-cpu is using [TPM](https://github.com/tmux-plugins/tpm).
 
 #### Configure
-Load tmux-cpu after you load catppuccin.
+Load tmux-cpu after you load ayu.
 ```sh
-set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'teddy-bear-123/tmux-ayu'
 ...
 set -g @plugin 'tmux-plugins/tmux-cpu'
 ```
 
 Add the cpu module to the status modules list.
 ```sh
-set -g @catppuccin_status_modules_right "... cpu ..."
+set -g @ayu_status_modules_right "... cpu ..."
 ```
 
 ### Weather modules
@@ -400,16 +400,16 @@ This module depends on [tmux-weather](https://github.com/xamut/tmux-weather).
 The preferred way to install tmux-weather is using [TPM](https://github.com/tmux-plugins/tpm).
 
 ##### Configure
-Load tmux-weather after you load catppuccin.
+Load tmux-weather after you load ayu.
 ```sh
-set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'teddy-bear-123/tmux-ayu'
 ...
 set -g @plugin 'xamut/tmux-weather'
 ```
 
 Add the weather module to the status modules list.
 ```sh
-set -g @catppuccin_status_modules_right "... weather ..."
+set -g @ayu_status_modules_right "... weather ..."
 ```
 
 #### tmux-clima
@@ -421,16 +421,16 @@ This module depends on [tmux-clima](https://github.com/vascomfnunes/tmux-clima).
 The preferred way to install tmux-clima is using [TPM](https://github.com/tmux-plugins/tpm).
 
 ##### Configure
-Load tmux-clima after you load catppuccin.
+Load tmux-clima after you load ayu.
 ```sh
-set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'teddy-bear-123/tmux-ayu'
 ...
 set -g @plugin 'vascomfnunes/tmux-clima'
 ```
 
 Add the weather module to the status modules list.
 ```sh
-set -g @catppuccin_status_modules_right "... clima ..."
+set -g @ayu_status_modules_right "... clima ..."
 ```
 
 ### Load module
@@ -442,16 +442,16 @@ This module depends on [tmux-loadavg](https://github.com/jamesoff/tmux-loadavg).
 The preferred way to install tmux-loadavg is using [TPM](https://github.com/tmux-plugins/tpm).
 
 #### Configure
-Load tmux-loadavg after you load catppuccin.
+Load tmux-loadavg after you load ayu.
 ```sh
-set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'teddy-bear-123/tmux-ayu'
 ...
 set -g @plugin 'jamesoff/tmux-loadavg'
 ```
 
 Add the load module to the status modules list.
 ```sh
-set -g @catppuccin_status_modules_right "... load ..."
+set -g @ayu_status_modules_right "... load ..."
 ```
 
 ## Create a custom module
@@ -460,7 +460,7 @@ It is possible to add a new custom module or overwrite any of the existing modul
 
 For further details, see the documentation in [custom/README.md](custom/README.md)
 
-Any file added to the custom folder will be preserved when updating catppuccin.
+Any file added to the custom folder will be preserved when updating ayu.
 
 ## Configuration Examples
 Below are provided a few configurations as examples or starting points.
@@ -477,73 +477,71 @@ To kill the tmux server and clear all global variables.
 ![Default](./assets/config1.png)
 
 ```sh
-set -g @catppuccin_window_right_separator "█ "
-set -g @catppuccin_window_number_position "right"
-set -g @catppuccin_window_middle_separator " | "
+set -g @ayu_window_right_separator "█ "
+set -g @ayu_window_number_position "right"
+set -g @ayu_window_middle_separator " | "
 
-set -g @catppuccin_window_default_fill "none"
+set -g @ayu_window_default_fill "none"
 
-set -g @catppuccin_window_current_fill "all"
+set -g @ayu_window_current_fill "all"
 
-set -g @catppuccin_status_modules_right "application session user host date_time"
-set -g @catppuccin_status_left_separator "█"
-set -g @catppuccin_status_right_separator "█"
+set -g @ayu_status_modules_right "application session user host date_time"
+set -g @ayu_status_left_separator "█"
+set -g @ayu_status_right_separator "█"
 
-set -g @catppuccin_date_time_text "%Y-%m-%d %H:%M:%S"
+set -g @ayu_date_time_text "%Y-%m-%d %H:%M:%S"
 ```
 
 ### Config 2
 ![Default](./assets/config2.png)
 
 ```sh
-set -g @catppuccin_window_left_separator "█"
-set -g @catppuccin_window_right_separator "█ "
-set -g @catppuccin_window_number_position "right"
-set -g @catppuccin_window_middle_separator "  █"
+set -g @ayu_window_left_separator "█"
+set -g @ayu_window_right_separator "█ "
+set -g @ayu_window_number_position "right"
+set -g @ayu_window_middle_separator "  █"
 
-set -g @catppuccin_window_default_fill "number"
+set -g @ayu_window_default_fill "number"
 
-set -g @catppuccin_window_current_fill "number"
-set -g @catppuccin_window_current_text "#{pane_current_path}"
+set -g @ayu_window_current_fill "number"
+set -g @ayu_window_current_text "#{pane_current_path}"
 
-set -g @catppuccin_status_modules_right "application session date_time"
-set -g @catppuccin_status_left_separator  ""
-set -g @catppuccin_status_right_separator " "
-set -g @catppuccin_status_fill "all"
-set -g @catppuccin_status_connect_separator "yes"
+set -g @ayu_status_modules_right "application session date_time"
+set -g @ayu_status_left_separator  ""
+set -g @ayu_status_right_separator " "
+set -g @ayu_status_fill "all"
+set -g @ayu_status_connect_separator "yes"
 ```
 
 ### Config 3
 ![Default](./assets/config3.png)
 
 ```sh
-set -g @catppuccin_window_left_separator ""
-set -g @catppuccin_window_right_separator " "
-set -g @catppuccin_window_middle_separator " █"
-set -g @catppuccin_window_number_position "right"
+set -g @ayu_window_left_separator ""
+set -g @ayu_window_right_separator " "
+set -g @ayu_window_middle_separator " █"
+set -g @ayu_window_number_position "right"
 
-set -g @catppuccin_window_default_fill "number"
-set -g @catppuccin_window_default_text "#W"
+set -g @ayu_window_default_fill "number"
+set -g @ayu_window_default_text "#W"
 
-set -g @catppuccin_window_current_fill "number"
-set -g @catppuccin_window_current_text "#W"
+set -g @ayu_window_current_fill "number"
+set -g @ayu_window_current_text "#W"
 
-set -g @catppuccin_status_modules_right "directory user host session"
-set -g @catppuccin_status_left_separator  " "
-set -g @catppuccin_status_right_separator ""
-set -g @catppuccin_status_fill "icon"
-set -g @catppuccin_status_connect_separator "no"
+set -g @ayu_status_modules_right "directory user host session"
+set -g @ayu_status_left_separator  " "
+set -g @ayu_status_right_separator ""
+set -g @ayu_status_fill "icon"
+set -g @ayu_status_connect_separator "no"
 
-set -g @catppuccin_directory_text "#{pane_current_path}"
+set -g @ayu_directory_text "#{pane_current_path}"
 ```
 
-[style-guide]: https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md
+[style-guide]: https://github.com/ayu/ayu/blob/main/docs/style-guide.md
 
 ## 💝 Thanks to
 
-- [Pocco81](https://github.com/catppuccin)
-- [vinnyA3](https://github.com/vinnyA3)
-- [rogeruiz](https://github.com/rogeruiz)
+EVERYONE OVER AT https://github.com/catppuccin/tmux , GO STAR THEM!
 
 &nbsp;
 
