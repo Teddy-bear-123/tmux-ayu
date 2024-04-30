@@ -1,17 +1,5 @@
 # THIS IS A FORK OF [catppuccin/tmux](https://github.com/catppuccin/tmux)
 
-<h3 align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://github.com/tmux/tmux">Tmux</a>
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-</h3>
-
-<p align="center">
-    <a href="https://github.com/catppuccin/tmux/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/tmux?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-    <a href="https://github.com/catppuccin/tmux/issues"><img src="https://img.shields.io/github/issues/catppuccin/tmux?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-    <a href="https://github.com/catppuccin/tmux/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/tmux?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
-</p>
 
 <p align="center">
   <img src="./assets/preview.webp"/>
@@ -42,10 +30,9 @@
 
 ## Themes
 
-- 🌻 [Dark](./catppuccin-latte.tmuxtheme)
-- 🪴 [Light](./catppuccin-frappe.tmuxtheme)
-- 🌺 [Mirage](./catppuccin-macchiato.tmuxtheme)
-- 🌿 [Mocha](./catppuccin-mocha.tmuxtheme)
+- 🌻 [Dark](./ayu-dark.tmuxtheme)
+- 🪴 [Light](./ayu-light.tmuxtheme)
+- 🌺 [Mirage](./ayu-mirage.tmuxtheme)
 
 ## Installation
 
@@ -72,9 +59,9 @@ set -g @ayu_flavour 'latte' # or frappe, macchiato, mocha
 ### Manual
 
 1. Clone this repository to your desired location (e.g.
-   `~/.config/tmux/plugins/ayu`)
+   `~/.config/tmux/plugins/tmux-ayu`)
 2. Add the following line to your `tmux.conf` file:
-    `run ~/.config/tmux/plugins/ayu/ayu.tmux`
+    `run ~/.config/tmux/plugins/tmux-ayu/ayu.tmux`
 3. (Optional) Set your preferred flavor and/or add configuration options as
    listed in [Configuration Options](#configuration-options).
 4. Reload Tmux by either restarting the session or reloading it with `tmux source-file ~/.tmux.conf`
